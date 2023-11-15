@@ -2,6 +2,7 @@
     --main-bg-color : #00A8B8;
     --button-bg-color: #00CEE0;
     --products-bg-color: #ebebeb;
+    --button-gray-color: #666;
 }
 
 
@@ -9,6 +10,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Nunito Sans', sans-serif;
 }
 
 
@@ -35,6 +37,10 @@
 .navbar-items-ul li{
     text-decoration: none;
     list-style: none;
+}
+.navbar-items-ul li a{
+    text-decoration: none;
+    color: #000;
 }
 .buscar form {
     display: flex;
@@ -75,11 +81,18 @@
     justify-content: space-around;
     gap: 40px;
 }
+.navbar-carrito{
+    text-decoration: none;
+    color: #000;
+}
 
 /* MAIN */
+main{
+    background-color: var(--products-bg-color);
+}
 
 .main-imagen{
-    margin-top: 25px;
+    padding-top: 25px;
     margin-bottom: 40px;
     display: flex;
     justify-content: center;
@@ -103,6 +116,7 @@
     color: white;
     border-radius: .375em;
     border-color: transparent;
+    cursor: pointer;
 }
 .products-container{
     margin-top: 50px;
@@ -162,7 +176,6 @@
 
 
 .footer-container{
-    margin-top: 20px;
     width: 100%;
     height: 150px;
     background-color: var(--main-bg-color);

@@ -1,0 +1,53 @@
+.register-container{
+    height: 700px;
+    width: 70%;
+    margin: 0% 15% 0% 15%;
+    padding-top: 30px;
+}
+.register{
+    width: 70%;
+    margin: 0% 15% 0% 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 20px;
+}
+.register-nombre-apellido,.register-password{
+    width: 45%;
+    margin: 0% 10% 0% 10%;
+    display: flex;
+    justify-content: space-between;
+}
+.register-nombre-apellido input,.register-password input{
+    width: 45%;
+    border-radius: .375em;
+    outline-color: transparent;
+    border-color: transparent;
+    height: 40px;
+    padding: 3px;
+}
+.register-email{
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    margin: 0% 10% 0% 10%;
+}
+.register-email input{
+    width: 50%;
+    border-radius: .375em;
+    outline-color: transparent;
+    border-color: transparent;
+    height: 40px;
+    padding: 3px;
+}
+.register-button button{
+    margin-top: 14px;
+    border-radius: .375em;
+    background-color: var(--button-bg-color);
+    text-decoration: none;
+    border-color: transparent;
+    padding: 15px;
+    cursor: pointer;
+    font-size: large;
+}

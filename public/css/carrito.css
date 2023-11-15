@@ -1,0 +1,156 @@
+.carrito-container{
+    display: flex;
+    flex-direction: row;
+    width: 70%;
+    height: 800px;
+    margin: 0% 15% 0% 15%;
+}
+
+.carrito-products-container{
+    width: 75%;
+    height: 100%;
+}
+.carrito-descuento-total-container{
+    width: 30%;
+    height: 100%;
+}
+.carrito-products{
+    border-radius: .375em;
+    border: 1px solid black;
+    width: 90%;
+    height: 80%;
+    margin-top: 5rem;
+}
+.carrito-descuento-total{
+    width: 90%;
+    height: 80%;
+    margin-top: 5rem;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.carrito-descuento{
+    border-radius: .375em;
+    border: 1px solid black;
+    width: 90%;
+    height: 20%;
+}
+.carrito-total-container{
+    border-radius: .375em;
+    border: 1px solid black;
+    width: 90%;
+    height: 70%
+}
+
+.carrito-product{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 15%;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+
+.carrito-descuento-title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30%;
+    text-align: center;
+    border-bottom: 1px solid black;
+}
+.carrito-descuento-input-button-container{
+    height: 70%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+.carrito-descuento-input input{
+    border-radius: .375em;
+    outline-color: transparent;
+    border-color: transparent;
+    height: 30px;
+    padding: 3px;
+}
+.carrito-descuento-button button{
+    border-radius: .375em;
+    background-color: var(--main-bg-color);
+    text-decoration: none;
+    height: 30px;
+    border-color: transparent;
+    padding: 5px;
+}
+
+.carrito-total{
+    height: 70%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.carrito-total-subtotales-container{
+    width: 80%;
+    margin: 0% 10% 0% 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.carrito-total-subtotales{
+    padding-top: 30px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.carrito-total-descuentos{
+    margin-top: 40px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.carrito-total-total{
+    width: 80%;
+    margin: 0% 10% 0% 10%;
+    display: flex;
+    justify-content: space-between;
+
+}
+.carrito-total-buttons{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+}
+.carrito-total-button-fin,.carrito-total-button-cont{
+    width: 70%;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+.carrito-total-button-fin button{
+    width: 100%;
+    border-radius: .375em;
+    background-color: var(--main-bg-color);
+    text-decoration: none;
+    height: 30px;
+    border-color: transparent;
+    padding: 0px 35px 0px 35px;
+    text-align: center;
+}
+.carrito-total-button-cont button{
+    width: 100%;
+    border-radius: .375em;
+    background-color: var(--button-gray-color);
+    text-decoration: none;
+    height: 30px;
+    border-color: transparent;
+    padding: 0px 35px 0px 35px;
+    text-align: center;
+}
