@@ -39,17 +39,14 @@
 }
 .productpage-price{
     margin-top: 35px;
-    width: min-content;
-    background-color: var(--button-bg-color);
-    border-radius: .375em;
+    text-align: start;
 }
 .productpage-price p {
     font-size: x-large;
     font-weight: bold;
-    padding: 10px;
 }
 .productpage-cards{
-    margin-top: 35px;
+    margin-top: 25px;
 }
 .productpage-button button{
     margin-top: 14px;
