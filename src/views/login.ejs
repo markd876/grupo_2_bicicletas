@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <%- include('./partials/head')  %>
+        <%- include('./partials/csslogin')  %>
+    </head>
+<body>
+    <%- include('./partials/header')  %>
+    <main>
+        <div class="login-container">
+            <div class="login">
+                <p>Logeate</p>
+                <div class="login-email">
+                    <input type="email" name="login-email" id="login-email" placeholder="Email">
+                </div>
+                <div class="login-password">
+                    <input type="password" name="login-password" id="login-password" placeholder="Contraseña">
+                </div>
+                <div class="login-remember">
+                    <input type="checkbox" name="login-rememberpassword" id="login-rememberpassword">Recordarme
+                </div>
+                <div class="login-button">
+                    <button>Entrar</button>
+                </div>
+                <div class="login-register">
+                    <p>¿No tienes cuenta? <a href="/register">Registrate</a></p>
+                </div>
+                <div class="login-forgot">
+                    <p>Recuperar contraseña</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <%- include('./partials/footer') %>
+</body>
+</html>

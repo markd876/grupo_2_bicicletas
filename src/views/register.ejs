@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <%- include('./partials/head')  %>
+        <%- include('./partials/cssregister')  %>
+    </head>
+<body>
+    <%- include('./partials/header')  %>
+    <main>
+        <div class="register-container">
+            <div class="register">
+                <p>Registrate</p>
+                <div class="register-nombre-apellido">
+                    <input type="text" name="register-nombre" id="register-nombre" placeholder="Nombre">
+                    <input type="text" name="register-apellido" id="register-apellido" placeholder="Apellido">
+                </div>
+                <div class="register-email">
+                    <input type="email" name="register-email" id="register-email" placeholder="Email">
+                </div>
+                <div class="register-password">
+                    <input type="password" name="register-password" id="register-password" placeholder="Contraseña">
+                    <input type="password" name="register-rpassword" id="register-rpassword" placeholder="Repetir contraseña">
+                </div>
+                <div class="register-button">
+                    <button>Registrarse</button>
+                </div>
+                <div class="register-login">
+                    <p>¿Ya tienes cuenta? <a href="/login">Ingresar</a></p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <%- include('./partials/footer') %>
+</body>
+</html>
