@@ -109,6 +109,12 @@ main{
     align-items: center;
 }
 
+.main-imagen img{
+    width: 100%;
+    height: 20%;
+
+}
+
 .main-categorias{
     margin-left: 15%;
     margin-right: 15%;
@@ -263,4 +269,77 @@ main{
 }
 .footer-socials ul li i{
     font-size: x-large;
+}
+@media (min-width: 362px) and (max-width: 768px) {
+    /* HEADER */
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .navbar-items {
+        width: 100%;
+        text-align: center;
+
+    }
+    .navbar-items-ul {
+        font-size: 14px;
+    }
+
+    .navbar-search,
+    .navbar-carrito {
+        width: 100%;
+    }
+
+    /* MAIN */
+    .main-categorias {
+        margin-left: 5%;
+        margin-right: 5%;
+        width: 90%;
+    }
+
+    .categoria-button {
+        width: 100%;
+        padding: 15px;
+        margin-bottom: 10px;
+    }
+
+    .products-container {
+        margin-left: 5%;
+        margin-right: 5%;
+        width: 90%;
+    }
+
+    .product {
+        flex-basis: 100%;
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    /* FOOTER */
+    .footer-container{
+        justify-content: center;
+        align-items: center;
+    }
+    .footer-section-container {
+        flex-direction: column;
+        justify-content: center;
+
+    }
+
+    .footer-logo-container,
+    .footer-politicas-container,
+    .footer-socials-container {
+        flex-basis: 100%;
+        text-align: center;
+        margin: auto; 
+}
+    }
+
+    .footer-socials ul {
+        margin-left: 20px;
+        width: 100%;
+        justify-content: center;
+    }
 }
