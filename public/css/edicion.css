@@ -1,0 +1,54 @@
+
+main{
+
+}
+table{
+    border-collapse: collapse;
+    width: 100%;
+    justify-content: center;
+    width: 100%;
+}
+thead, tbody{
+    width: 100%;
+    
+}
+th, tr{
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+    border: 1px solid black;
+    padding: 5px;
+    width: 100%;
+
+}
+tr:not(:last-child) td {
+    border-right: 1px solid black;
+  }
+td:not(:last-child) {
+    border-bottom: 1px solid black;
+  }
+
+th{
+    background-color: #f2f2f2;
+}
+
+
+button {
+    padding: 8px 15px 8px 15px;
+    background-color: var(--button-bg-color);
+    color: white;
+    border-radius: .375em;
+    border-color: transparent;
+    cursor: pointer;
+    text-decoration: none;
+}
+.Agregar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.Agregar button{
+    width: 75px;
+    height: 50px;
+}

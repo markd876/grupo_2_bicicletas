@@ -281,10 +281,6 @@ main{
     .navbar-items {
         width: 100%;
         text-align: center;
-
-    }
-    .navbar-items-ul {
-        font-size: 14px;
     }
 
     .navbar-search,
@@ -318,14 +314,9 @@ main{
     }
 
     /* FOOTER */
-    .footer-container{
-        justify-content: center;
-        align-items: center;
-    }
     .footer-section-container {
         flex-direction: column;
         justify-content: center;
-
     }
 
     .footer-logo-container,
@@ -333,8 +324,7 @@ main{
     .footer-socials-container {
         flex-basis: 100%;
         text-align: center;
-        margin: auto; 
-}
+        margin-bottom: 20px;
     }
 
     .footer-socials ul {
