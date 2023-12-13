@@ -13,8 +13,7 @@ app.use(express.json())
 
 app.use('/carrito', carritoRoutes)
 app.use('/producto', productosRoutes)
-app.use('/login', userRoutes)
-app.use('/register', userRoutes)
+app.use('/users', userRoutes)
 app.use('/edicion', edicionRoutes)
 
 app.set('view engine', 'ejs')
