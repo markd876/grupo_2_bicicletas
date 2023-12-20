@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <%- include('./partials/head')  %>
+        <%- include('./partials/csscrear')  %>
+    </head>
+<body>
+    <%- include('./partials/header')  %>
+    <main>
+        <div class="crear-container">
+            <div class="crear-producto">
+                <p>Crea tu producto</p>
+                <div class="crear-nombre-producto">
+                    <input type="text" name="producto-nombre" id="producto-nombre" placeholder="ProductoName">
+                </div>
+                <div class="producto-descripcion">
+                    <input type="text" name="producto-descripcion" id="producto-descripcion" placeholder="Descripcion">
+                </div>
+                <div class="producto-imagen">
+                    <input type="image" name="producto-imagen" id="producto-imagen" placeholder="Imagen">
+                </div>
+                <div class="producto-colores">
+                    <input list="producto-colores" id="producto-colores" name="producto-colores" autocomplete="off" placeholder="Colores">
+                        <datalist id="producto-colores">
+                            <option value="Rojo">
+                            <option value="Verde">
+                            <option value="Azul">
+                        </datalist>
+                </div>
+                <div class="producto-precio">
+                    <input type="text" name="producto-precio" id="producto-precio" placeholder="Precio">
+                </div>
+                <div class="agregar-button">
+                    <button>Agregar</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <%- include('./partials/footer') %>
+</body>
+</html>
