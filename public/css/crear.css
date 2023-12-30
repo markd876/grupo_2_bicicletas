@@ -29,13 +29,17 @@
     padding: 3px;
 }
 .producto-descripcion input{
-    width: 80%;
+    width: 50%;
     border-radius: .375em;
     outline-color: transparent;
     border-color: transparent;
-    height: 90px;
+    height: 80px;
     padding: 3px;
+    text-align: start;
 }
+.producto-descripcion input::-webkit-input-placeholder {
+    text-align: start;
+  }
 .agregar-button button{
     margin-top: 14px;
     border-radius: .375em;

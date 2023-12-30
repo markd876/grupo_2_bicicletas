@@ -8,16 +8,16 @@
     <%- include('./partials/header')  %>
     <main>
         <div class="crear-container">
-            <div class="crear-producto">
-                <p>Crea tu producto</p>
+                <form action="/crear/addproduct" method="POST" id="addproduct" class="crear-producto">
+                <p>Añadir producto</p>
                 <div class="producto-nombre">
-                    <input type="text" name="producto-nombre" id="producto-nombre" placeholder="Nombre">
+                    <input type="text" name="productoNombre" id="productoNombre" placeholder="Nombre">
                 </div>
                 <div class="producto-descripcion">
-                    <input type="text" name="producto-descripcion" id="producto-descripcion" placeholder="Descripcion">
+                    <input type="text" name="productoDesc" id="productoDesc" placeholder="Descripcion">
                 </div>
                 <div class="producto-colores">
-                    <input list="colores" id="producto-colores" name="producto-colores" placeholder="Color del producto" />
+                    <input list="colores" id="productoColor" name="productoColor" placeholder="Color" />
                         <datalist id="colores">
                             <option value="Rojo"></option>
                             <option value="Verde"></option>
@@ -27,16 +27,16 @@
                         </datalist>
                 </div>
                 <div class="producto-precio">
-                    <input type="text" name="producto-precio" id="producto-precio" placeholder="Precio">
+                    <input type="text" name="productoPrecio" id="productoPrecio" placeholder="Precio">
                 </div>
-                <label for="producto-imagen">Subi una imagen de tu producto</label>
+                <label for="producto-imagen">Subir imagen del producto</label>
                 <div class="producto-imagen">
                     <input type="file" name="producto-imagen" id="producto-imagen" placeholder="Imagen">
                 </div>
                 <div class="agregar-button">
-                    <button>Agregar</button>
+                    <button type="submit">Agregar</button>
                 </div>
-            </div>
+            </form>
         </div>
     </main>
     <%- include('./partials/footer') %>

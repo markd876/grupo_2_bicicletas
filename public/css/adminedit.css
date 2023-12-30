@@ -1,0 +1,56 @@
+
+.articulos {
+    padding: 20px;
+    width: 40%;
+    margin-left: 30%;
+    margin-right: 30%;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+  }
+  
+  .articulo {
+    background-color: #f9f9f9;
+    padding: 16px;
+    border-radius: 4px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .articulo h2 {
+    margin-bottom: 8px;
+    font-size: 1.5em;
+  }
+  
+  .descripcion {
+    margin-bottom: 12px;
+  }
+  
+  .precio, .color {
+    margin: 0;
+  }
+.Agregar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.Agregar button{
+    width: 75px;
+    height: 50px;
+}
+.a-button-article{
+    text-decoration: none;
+    color: black;
+}
+.a-button-article:hover{
+    cursor: pointer;
+}
+.articulo-inputs{
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+}
+.button-articulo{
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+}

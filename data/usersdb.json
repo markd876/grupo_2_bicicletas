@@ -1,0 +1,42 @@
+[
+    {
+        "id": 1,
+        "firstName": "luctus cum",
+        "lastName": "viverra dapibus",
+        "email": "chuggill0@dyndns.org",
+        "password": "uO6*`4/WCcv",
+        "type": "Admin"
+    },
+    {
+        "id": 2,
+        "firstName": "posuere",
+        "lastName": "ipsum",
+        "email": "jhadwick1@msu.edu",
+        "password": "bN9>#hiJ=",
+        "type": "Customer"
+    },
+    {
+        "id": 3,
+        "firstName": "sed augue",
+        "lastName": "venenatis",
+        "email": "sadamczyk2@dedecms.com",
+        "password": "yR5%M((%ni_",
+        "type": "Admin"
+    },
+    {
+        "id": 4,
+        "firstName": "curabitur gravida",
+        "lastName": "ipsum",
+        "email": "asumshon3@exblog.jp",
+        "password": "iQ3|6\\UCD",
+        "type": "Admin"
+    },
+    {
+        "id": 5,
+        "firstName": "platea dictumst",
+        "lastName": "tristique in",
+        "email": "mspurriar4@twitpic.com",
+        "password": "wK7/D9N4L=",
+        "type": "Admin"
+    }
+]
