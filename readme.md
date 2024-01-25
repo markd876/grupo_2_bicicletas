@@ -5,7 +5,6 @@ Tematica: Venta de bicicletas, componentes y accesorios relacionados al ciclismo
 Integrantes:
 - Marcos Darchuk
 - Agustin Cuello
-- Cecilia Coronel
 
 Publico objetivo: Ciclistas entusiastas y publico en general
 

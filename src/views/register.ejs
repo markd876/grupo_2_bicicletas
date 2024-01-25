@@ -7,12 +7,13 @@
 <body>
     <%- include('./partials/header')  %>
     <main>
+        <form action="/register" method="POST">
         <div class="register-container">
             <div class="register">
                 <p>Registrate</p>
                 <div class="register-nombre-apellido">
-                    <input type="text" name="register-nombre" id="register-nombre" placeholder="Nombre">
-                    <input type="text" name="register-apellido" id="register-apellido" placeholder="Apellido">
+                    <input type="text" name="register_nombre" id="register_nombre" placeholder="Nombre">
+                    <input type="text" name="register_apellido" id="register_apellido" placeholder="Apellido">
                 </div>
                 <div class="register-email">
                     <input type="email" name="register-email" id="register-email" placeholder="Email">
@@ -21,14 +22,19 @@
                     <input type="password" name="register-password" id="register-password" placeholder="Contraseña">
                     <input type="password" name="register-rpassword" id="register-rpassword" placeholder="Repetir contraseña">
                 </div>
+                <label for="user_imagen">Subir imagen</label>
+                <div class="user_imagen">
+                    <input type="file" name="user_imagen" id="user_imagen" placeholder="Imagen">
+                </div>
                 <div class="register-button">
-                    <button>Registrarse</button>
+                    <button type="submit">Registrarse</button>
                 </div>
                 <div class="register-login">
                     <p>¿Ya tienes cuenta? <a href="/login">Ingresar</a></p>
                 </div>
             </div>
         </div>
+    </form>
     </main>
     <%- include('./partials/footer') %>
 </body>
