@@ -7,7 +7,7 @@
 <body>
     <%- include('./partials/header')  %>
     <main>
-        <form action="/register" method="POST">
+        <form action="/registro" method="POST" enctype="multipart/form-data">
         <div class="register-container">
             <div class="register">
                 <p>Registrate</p>
@@ -16,11 +16,11 @@
                     <input type="text" name="register_apellido" id="register_apellido" placeholder="Apellido">
                 </div>
                 <div class="register-email">
-                    <input type="email" name="register-email" id="register-email" placeholder="Email">
+                    <input type="email" name="register_email" id="register_email" placeholder="Email">
                 </div>
                 <div class="register-password">
-                    <input type="password" name="register-password" id="register-password" placeholder="Contraseña">
-                    <input type="password" name="register-rpassword" id="register-rpassword" placeholder="Repetir contraseña">
+                    <input type="password" name="register_password" id="register_password" placeholder="Contraseña">
+                    <input type="password" name="register_rpassword" id="register_rpassword" placeholder="Repetir contraseña">
                 </div>
                 <label for="user_imagen">Subir imagen</label>
                 <div class="user_imagen">

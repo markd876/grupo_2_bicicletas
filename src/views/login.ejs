@@ -7,21 +7,23 @@
 <body>
     <%- include('./partials/header')  %>
     <main>
+        <form action="/login" method="POST">
         <div class="login-container">
             <div class="login">
                 <p>Logeate</p>
                 <div class="login-email">
-                    <input type="email" name="login-email" id="login-email" placeholder="Email">
+                    <input type="email" name="login_email" id="login_email" placeholder="Email">
                 </div>
                 <div class="login-password">
-                    <input type="password" name="login-password" id="login-password" placeholder="Contraseña">
+                    <input type="password" name="login_password" id="login_password" placeholder="Contraseña">
                 </div>
                 <div class="login-remember">
-                    <input type="checkbox" name="login-rememberpassword" id="login-rememberpassword">Recordarme
+                    <input type="checkbox" name="login_rememberpassword" id="login_rememberpassword">Recordarme
                 </div>
                 <div class="login-button">
-                    <button>Entrar</button>
+                    <button type="submit">Entrar</button>
                 </div>
+            </form>
                 <div class="login-register">
                     <p>¿No tienes cuenta? <a href="/register">Registrate</a></p>
                 </div>

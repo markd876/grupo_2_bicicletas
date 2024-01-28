@@ -9,7 +9,15 @@
                     <li>Bicicletas</li>
                     <li>Componentes</li>
                     <li>Accesorios</li>
-                    <li><a href="/admin">Admin</a></li>
+                    <% if (!(user.isAuth)) { %>
+                        <li><a href="/login">Login</a></li>
+                    <% } %>
+                    <% if (user.isAuth) { %>
+                        <li><a href="/admin">Admin</a></li>
+                    <% } %>
+                    <% if (user.isAuth) { %>
+                        <li><a href="/logout">Logout</a></li>
+                    <% } %>
                 </ul>
             </div>
             <div class="navbar-search">
@@ -22,6 +30,9 @@
                     </div>
                 </form>
                 <a href="/carrito" class="navbar-carrito"><i class="fa-solid fa-cart-shopping"></i></a>
+                <% if (user.isAuth) { %>
+                    <p class="navbar-search-p">Hola, <%= user.firstName %> !</p>
+                <% } %>
             </div>
         </div>
     </div>
