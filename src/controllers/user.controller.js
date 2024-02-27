@@ -4,10 +4,10 @@ const path = require('path');
 const fs = require('fs')
 const upload = multer({ dest: './public/images/users' })
 const saltRounds = 10;
-const userdb = path.join(__dirname, '../../data/usersdb.json');
-let users = JSON.parse(fs.readFileSync(userdb, 'utf-8'));
 const session = require('express-session')
 const cookieParser = require('cookie-parser')
+const db = require('../database/models');
+const User = db.Users
 
 
 let controllers = {
@@ -19,7 +19,7 @@ let controllers = {
     },
     registro: (req,res)=>{
         let remail = req.body.register_email
-        let user = users.find((user) => user.email == remail)
+        let user = false
         if(user){
             res.send('email registrado')
         } else{
@@ -34,25 +34,17 @@ let controllers = {
             }
             const hashedPassword = bcrypt.hashSync(rpassword, saltRounds);
             console.log(hashedPassword)
-            let newUser = {
-                firstName: rname,
-                lastName: rsurname,
-                email:remail,
-                password: hashedPassword,
-                profilePic: rProfilePic
-            }
-            users.push(newUser)
-            console.log(newUser)
-            let userJSON = JSON.stringify(users, null, '')
-            fs.writeFileSync(userdb, userJSON)
+
+            
+            User.create({nombre : rname, apellido : rsurname, password : hashedPassword, email : remail})
             res.redirect('login')
         }
     },
-    logearse: (req,res)=>{
+    logearse: async (req,res)=>{
         lemail = req.body.login_email
         lpassword = req.body.login_password
         lremember = req.body.login_rememberpassword
-        let user = users.find((user) => user.email == lemail) 
+        let user = await User.findOne({where : {email : lemail}})
         if(user){
             if(bcrypt.compareSync(lpassword, user.password)){
                 console.log('usuario logeado')
