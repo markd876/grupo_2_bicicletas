@@ -8,7 +8,7 @@
     <%- include('./partials/header')  %>
     <main>
         <div class="crear-container">
-                <form action="/crear/addproduct" method="POST" id="addproduct" class="crear-producto">
+                <form class="formulario" action="/crear/addproduct" method="POST" id="addproduct" class="crear-producto">
                 <p>Añadir producto</p>
                 <div class="producto-nombre">
                     <input type="text" name="productoNombre" id="productoNombre" placeholder="Nombre">
@@ -33,6 +33,9 @@
                 <div class="producto-imagen">
                     <input type="file" name="producto-imagen" id="producto-imagen" placeholder="Imagen">
                 </div>
+                <div class = 'errores'>
+                    <ul></ul>
+                </div>
                 <div class="agregar-button">
                     <button type="submit">Agregar</button>
                 </div>
@@ -40,5 +43,6 @@
         </div>
     </main>
     <%- include('./partials/footer') %>
+    <script src="/js/crear-script.js"></script>
 </body>
 </html>

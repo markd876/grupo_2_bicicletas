@@ -7,7 +7,7 @@
 <body>
     <%- include('./partials/header')  %>
     <main>
-        <form action="/registro" method="POST" enctype="multipart/form-data">
+        <form class= "formulario" action="/registro" method="POST" enctype="multipart/form-data">
         <div class="register-container">
             <div class="register">
                 <p>Registrate</p>
@@ -26,6 +26,9 @@
                 <div class="user_imagen">
                     <input type="file" name="user_imagen" id="user_imagen" placeholder="Imagen">
                 </div>
+                <div class = 'errores'>
+                    <ul></ul>
+                </div>
                 <div class="register-button">
                     <button type="submit">Registrarse</button>
                 </div>
@@ -37,5 +40,6 @@
     </form>
     </main>
     <%- include('./partials/footer') %>
+    <script src="/js/register-script.js"></script>
 </body>
 </html>

@@ -7,7 +7,7 @@
 <body>
     <%- include('./partials/header')  %>
     <main>
-        <form action="/login" method="POST">
+        <form class = "formulario" action="/login" method="POST">
         <div class="login-container">
             <div class="login">
                 <p>Logeate</p>
@@ -23,16 +23,20 @@
                 <div class="login-button">
                     <button type="submit">Entrar</button>
                 </div>
+                <div class = 'errores'>
+                    <ul></ul>
+                </div>
             </form>
                 <div class="login-register">
                     <p>¿No tienes cuenta? <a href="/register">Registrate</a></p>
                 </div>
                 <div class="login-forgot">
-                    <p>Recuperar contraseña</p>
+                    <p>Recuperar contraseña</p>`
                 </div>
             </div>
         </div>
     </main>
     <%- include('./partials/footer') %>
+    <script src="/js/login-script.js"></script>
 </body>
 </html>

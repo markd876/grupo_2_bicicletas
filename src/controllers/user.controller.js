@@ -8,6 +8,7 @@ const session = require('express-session')
 const cookieParser = require('cookie-parser')
 const db = require('../database/models');
 const User = db.Users
+const { validationResult } = require ('express-validator');
 
 
 let controllers = {
@@ -62,7 +63,7 @@ let controllers = {
         } else{
             console.log('usuario no encontrado')
         }
-        res.redirect('/')
+         res.redirect('/')
     },
     logout: (req,res)=>{
         req.session.destroy()

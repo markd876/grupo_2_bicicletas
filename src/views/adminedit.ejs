@@ -8,23 +8,26 @@
     <%- include('./partials/header')  %>
     <main>
         <div class="articulos">
-            <form action="updateprod/<%= producto.id%>" method="POST">
+            <form class="formulario" action="updateprod/<%= producto.id%>" method="POST">
               <article class="articulo">
                 <div class="articulo-inputs">
                     <label for="prodName">Nombre de producto</label>
-                    <input type="text" name="nombre" id="nombre" value="<%= producto.nombre%>">
+                    <input type="text" name="nombre" id="producto_nombre" value="<%= producto.nombre%>">
                 </div>
                 <div class="articulo-inputs">
                     <label for="prodName">Descripcion de producto</label>
-                    <input type="text" name="descripcion" id="descripcion" value="<%= producto.descripcion%>">
+                    <input type="text" name="descripcion" id="producto_descripcion" value="<%= producto.descripcion%>">
                 </div>
                 <div class="articulo-inputs">
                     <label for="prodName">Precio de producto</label>
-                    <input type="text" name="precio" id="precio" value="<%= producto.precio%>">
+                    <input type="text" name="precio" id="producto_precio" value="<%= producto.precio%>">
                 </div>
                 <div class="articulo-inputs">                    
                     <label for="prodName">Color de producto</label>
-                    <input type="text" name="color" id="color" value="<%= producto.color%>">
+                    <input type="text" name="color" id="producto_color" value="<%= producto.color%>">
+                </div>
+                <div class = 'errores'>
+                    <ul></ul>
                 </div>
                 <div class="button-articulo">
                     <button type="submit">Editar</button>
@@ -34,5 +37,6 @@
           </div>
     </main>
     <%- include('./partials/footer') %>
+    <script src="/js/editarprod-script.js"></script>
 </body>
 </html>
