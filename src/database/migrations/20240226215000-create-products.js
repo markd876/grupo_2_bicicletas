@@ -10,22 +10,24 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       nombre: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING(255),
+        allowNull: false,
       },
       descripcion: {
-        type: Sequelize.TEXT
-      },
-      password: {
-        type: Sequelize.STRING
+        type: Sequelize.TEXT,
+        allowNull: false,
       },
       precio: {
-        type: Sequelize.DECIMAL
+        type: Sequelize.DECIMAL(10, 2),
+        allowNull: false,
       },
       categoria: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
+        allowNull: false,
       },
       color: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
+        allowNull: false,
       },
       createdAt: {
         allowNull: false,

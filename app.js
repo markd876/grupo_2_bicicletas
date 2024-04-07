@@ -14,8 +14,9 @@ const userRoutes = require('./src/routes/user.routes.js')
 const adminRoutes = require('./src/routes/admin.routes.js')
 const crearRoutes = require('./src/routes/crear.routes.js')
 const apiRoutes = require('./src/routes/API/api.routes.js')
-
-
+// prueba db
+const db = require('./src/database/models')
+//
 app.use(cookieParser())
 
 app.use(session({
@@ -29,6 +30,41 @@ app.use('/public', express.static(`${__dirname}/images`))
 
 app.use(express.urlencoded({extended:true}))
 app.use(express.json())
+//prueba db
+//alta de pedido
+app.post('/crearpedido', (req, res)=>{
+    db.pedidos.create(req.body)
+        .then( (data)=>{
+            res.json( {datos:data})
+        })
+        .catch( (error)=>{
+            res.json( {error: error})
+        })
+})
+//alta de ordenes
+app.post('/crearorden', (req, res)=>{
+    db.orden.create(req.body)
+        .then( (data)=>{
+            res.json( {datos:data})
+        })
+        .catch( (error)=>{
+            res.json( {error: error})
+        })
+})
+// mostrar
+app.get('/mostrarpedidos', (req,res)=>{
+    db.pedidos.findAll({
+          include: ['pedidosbicicletas'] 
+    })
+    .then( (data)=>{
+        res.json( {datos:data})
+    })
+    .catch( (error)=>{
+        res.json( {error: error})
+    })
+})
+
+//fin
 app.use(rememberUser)
 app.use('/carrito', carritoRoutes)
 app.use('/producto', productosRoutes)

@@ -6,17 +6,16 @@ const { v4: uuidv4 } = require('uuid');
 let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8')); */
 
 const db = require('../database/models')
-const products = db.Products
-const id = db.Products.id
+const { validationResult } = require('express-validator');
 
 
 
 let controllers = {
-    home: function(req,res){
+    home: function (req, res) {
         db.Products.findAll()
-            .then ((products)=>{
-        res.render('admin', {products:products})
-    })
+            .then((products) => {
+                res.render('admin', { products: products })
+            })
     },
     edit: async function(req,res){
         try{
@@ -28,20 +27,28 @@ let controllers = {
         
 
     },
-    update: function(req,res){
-        db.Products.update({
-            nombre: req.body.nombre,
-            descripcion: req.body.descripcion,
-            precio: req.body.precio,
-            color: req.body.color
-        },  {
-            where: {
-                id: req.params.id
-            }
-        })
-        res.redirect('/admin')
-    },
-    delete: function(req,res){
+    update: async function (req, res) {
+        let errors = validationResult(req);
+        console.log(errors.mapped());
+        if (errors.isEmpty()) {
+            db.Products.update({
+                nombre: req.body.nombre,
+                descripcion: req.body.descripcion,
+                precio: req.body.precio,
+                color: req.body.color
+            }, {
+                where: {
+                    id: req.params.id
+                }
+            })
+            res.redirect('/admin')
+        } else {
+            let producto = await db.Products.findByPk(req.params.id);
+            res.render('adminedit', {producto})
+        }
+    }
+    ,
+    delete: function (req, res) {
         db.Products.destroy({
             where: {
                 id: req.params.id

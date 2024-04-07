@@ -12,11 +12,14 @@
             <div class="register">
                 <p>Registrate</p>
                 <div class="register-nombre-apellido">
-                    <input type="text" name="register_nombre" id="register_nombre" placeholder="Nombre">
-                    <input type="text" name="register_apellido" id="register_apellido" placeholder="Apellido">
+                    <input type="text" name="register_nombre" id="register_nombre" placeholder="Nombre"
+                    value="<%= locals.old && old.register_nombre ? old.register_nombre : ''%>">
+                    <input type="text" name="register_apellido" id="register_apellido" placeholder="Apellido"
+                    value="<%= locals.old && old.register_apellido ? old.register_apellido : ''%>">
                 </div>
                 <div class="register-email">
-                    <input type="email" name="register_email" id="register_email" placeholder="Email">
+                    <input type="email" name="register_email" id="register_email" placeholder="Email"
+                    value="<%= locals.old && old.register_email ? old.register_email: ''%>">
                 </div>
                 <div class="register-password">
                     <input type="password" name="register_password" id="register_password" placeholder="Contraseña">

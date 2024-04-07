@@ -11,10 +11,12 @@
                 <form class="formulario" action="/crear/addproduct" method="POST" id="addproduct" class="crear-producto">
                 <p>Añadir producto</p>
                 <div class="producto-nombre">
-                    <input type="text" name="productoNombre" id="productoNombre" placeholder="Nombre">
+                    <input type="text" name="productoNombre" id="productoNombre" placeholder="Nombre"
+                    value="<%= locals.old && old.productoNombre ? old.productoNombre : ''%>">
                 </div>
                 <div class="producto-descripcion">
-                    <input type="text" name="productoDesc" id="productoDesc" placeholder="Descripcion">
+                    <input type="text" name="productoDesc" id="productoDesc" placeholder="Descripcion"
+                    value="<%= locals.old && old.productoDesc ? old.productoDesc : ''%>">
                 </div>
                 <div class="producto-colores">
                     <input list="colores" id="productoColor" name="productoColor" placeholder="Color" />
@@ -27,7 +29,8 @@
                         </datalist>
                 </div>
                 <div class="producto-precio">
-                    <input type="text" name="productoPrecio" id="productoPrecio" placeholder="Precio">
+                    <input type="text" name="productoPrecio" id="productoPrecio" placeholder="Precio"
+                    value="<%= locals.old && old.productoPrecio ? old.productoPrecio : ''%>">
                 </div>
                 <label for="producto-imagen">Subir imagen del producto</label>
                 <div class="producto-imagen">
@@ -43,6 +46,6 @@
         </div>
     </main>
     <%- include('./partials/footer') %>
-    <script src="/js/crear-script.js"></script>
+     <script src="/js/crear-script.js"></script>
 </body>
 </html>
